@@ -11,7 +11,7 @@ function StockDetail() {
   useEffect(() => {
     const fetchStock = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/stocks');
+        const response = await fetch('https://nse-marketpulse.onrender.com/api/stocks');
         const result = await response.json();
         const foundStock = result.data.find(s => s.ticker === ticker);
         setStock(foundStock);
